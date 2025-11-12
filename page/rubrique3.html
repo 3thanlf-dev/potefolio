@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <link rel="stylesheet" href="../css/stylesheet.css" />
+      <script src="../script/script1.js"></script>
+      <link rel="icon" href="../img/CV_Logo.png" />
+      <title>Mon CV</title>
+   </head>
+   <body onload="displaySlide()">
+      <div id="page">
+         <div class="loader">
+            <span class="lettre">C</span>
+            <span class="lettre">H</span>
+            <span class="lettre">A</span>
+            <span class="lettre">R</span>
+            <span class="lettre">G</span>
+            <span class="lettre">E</span>
+            <span class="lettre">M</span>
+            <span class="lettre">E</span>
+            <span class="lettre">N</span>
+            <span class="lettre">T</span>
+         </div>
+         <header>
+            <a href="../index.html">Page principale</a>
+         </header>
+         <hr>
+         <nav id="menuprincipal">
+         	<a href="#" class="menumobile">Menu</a>
+            <ul>
+               <li class="menuactuel"><a href="">Sports</a>
+                  <ul class="sousmenu">
+                     <li><a href="rubrique1.html">- 5 ans</a></li>
+                     <li class="menuactuel"><a href="rubrique3.html">+ 5 ans</a></li>
+                  </ul>
+               </li>
+               <li><a href="">Formations</a>
+                  <ul class="sousmenu">
+                     <li><a href="../page/diplomes.html">Diplomes</a></li>
+                     <li><a href="../page/j-lycee.html">Jusqu'au lycée</a></li>
+                     <li><a href="../page/etudesup.html">Etude supérieur</a></li>
+                  </ul>
+               </li>
+               <li><a href="">Contact</a>
+                <ul class="sousmenu">
+                   <li><a href="formulaire.html">Formulaire de contact</a></li>
+                   <li><a href="../page/avis.html">Avis</a></li>
+                   <li><a href="MonCVPDF.html">Mon CV PDF</a></li>
+                </ul>
+             </li>
+             <li class="menu"><a href="">style</a>
+               <ul class="sousmenu">
+                  <li><a onclick='light()'>light-mode</a></li>
+                  <li><a onclick='dark()'>dark-mode</a></li>
+               </ul>
+            </li>
+          </ul>
+       </nav>
+       <hr>
+       <div id="contenu">
+          <section id="principal1">
+             <div class="interieurprincipal">
+               <div class="slides">
+                  <img src="../img/pingpong.jpeg" style="width:100%">
+               </div>
+               <div class="slides">
+                  <img src="../img/equitation.jpeg" style="width:90%">
+               </div>
+               <div id="controlV2">
+                  <img src="../img/previous.svg" height="50" onclick="nextSlide(-1)">
+                  <img id="img" src="../img/pingpong.jpeg" height="50" onclick="showImage(0)">
+                  <img id="img" src="../img/equitation.jpeg" height="50" onclick="showImage(1)">
+                  <img src="../img/next.svg" height="50" onclick="nextSlide(1)">
+               </div>
+             </div>
+          </section>
+          <aside id="secondaire1">
+             <div class="interieursecondaire">
+                  <p>J'ai commencer le tennis de table en arrivant au collège. J'était plutot bon directement j'ai fait de la compétition et mon classement à augmenter très rappidement.</p>
+                  <p> 3ans plus tard j'était classé 650 au tennis de table mais par manque de temps pour aller au entrainement j'ai stagné</p>
+                  <p>Ma maman etant un championne d'equitation quand j'etais petit j'ai donc voulu faire comme elle et j'ai donc commencé l'equitation en arrivant a l'ecole primaire. J'ai fais quelque concour et les ai remporté</p>
+               </div>
+          </aside>   
+          <div class="push"></div>
+       </div>
+       <hr>
+       <footer>
+         Mon CV pour 2032 dans le cadre de l'UE math et informatique.
+       </footer>
+    </div>
+</body>
+</html>

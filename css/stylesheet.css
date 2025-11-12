@@ -1,0 +1,457 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/galaxy.gif");
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    color: black;
+    font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    font-size: 100%; 
+    overflow-x: hidden;
+}
+
+.bodyL {
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/ciel.gif");
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    color: black;
+    font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    font-size: 100%; 
+    overflow-x: hidden;
+}
+
+#page {
+    margin: 0 auto;   
+    max-width: 1000px;   
+}
+
+p {
+     text-align: justify;	
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, nav, section
+{
+     display: block;
+}
+
+.loader{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: visible;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: black;
+}
+
+.lettre{
+	color: #484848;
+	font-size:80px;
+	letter-spacing:15px;
+	margin-bottom: 150px;
+	animation: flash 1.2s linear infinite;
+}
+
+@keyframes flash{
+	0%{
+		color: #fff900;
+		text-shadow: 0 0 7px #fff900;
+	}
+	90%{
+		color: #484848;
+		text-shadow: none;
+	}
+	100%{
+		color:#fff900;
+		text-shadow: 0 0 7px #fff900;
+	}
+}
+
+.lettre:nth-child(1){
+	animation-delay: 0.1s;
+}
+.lettre:nth-child(2){
+	animation-delay: 0.2s;
+}
+.lettre:nth-child(3){
+	animation-delay: 0.3s;
+}
+.lettre:nth-child(4){
+	animation-delay: 0.4s;
+}
+.lettre:nth-child(5){
+	animation-delay: 0.5s;
+}
+.lettre:nth-child(6){
+	animation-delay: 0.6s;
+}
+.lettre:nth-child(7){
+	animation-delay: 0.7s;
+}
+.lettre:nth-child(8){
+	animation-delay: 0.8s;
+}
+.lettre:nth-child(9){
+	animation-delay: 0.9s;
+}
+.lettre:nth-child(10){
+	animation-delay: 1s;
+}
+
+.fondu-out{
+	opacity:0;
+	transition: opacity 5s ease-out, visibility 3s linear 200ms;
+	visibility: hidden;
+}
+
+header {
+    padding: 5px;
+	padding-top: 20px;
+    background-color:transparent;
+	background-size: cover;
+    min-height: 50px;
+    font-size: 2em;
+	text-align: center;
+}
+
+header a, header a:hover, header a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+#menuprincipal {
+   height: 29px;
+   background-color: transparent;
+   color: white;
+   border-radius: 10px;
+   margin-top: 5px;
+   padding-bottom: 10px;
+   padding-right: 50px;
+   border-color: black;
+}
+
+.menuprincipalL {
+	height: 29px;
+	background-color: transparent;
+	color: black;
+	border-radius: 10px;
+	margin-top: 5px;
+	padding-bottom: 10px;
+	padding-right: 50px;
+	border-color: black;
+ }
+
+#menuprincipal ul {
+   display: flex; 
+   justify-content: space-between;
+}
+
+#menuprincipal ul li {
+   display: inline-block;
+   position: relative;
+   margin: 0 2px;
+}
+
+#menuprincipal ul li a {
+   text-decoration: none;
+   color: white;
+   padding: 5px 15px;   
+   display: block;
+   transition: all 0.2s ease;
+}
+
+#menuprincipal ul li.menuactuel a {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+#menuprincipal ul li a:hover {
+   background-color: darkgray;   
+}
+
+#menuprincipal a.menumobile {
+	display: none;   
+}	
+
+@media screen and (max-width : 640px) {
+    #menuprincipal {
+        height: auto;
+        padding: 0;
+    }
+	#menuprincipal a.menumobile {
+		display:inline-block;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		text-decoration : none;
+		background-color: #037E8C;   
+		color: white;
+		padding: 15px;   
+	}	
+	    #menuprincipal > ul { 
+        display: none;
+        position: static;
+        flex-direction: column;
+        width: 100%;
+        background-color: #2c3e50;
+        border-radius: 8px;
+        margin-top: 5px;
+        padding: 5px;
+    }
+	    #menuprincipal ul li {
+        display: block;
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+	#menuprincipal ul li a {
+		padding: 15px;
+	}
+	#menuprincipal ul li:first-child {
+		border-top: 1px solid #7FA503;   
+	}
+        #menuprincipal.active > ul {
+        display: flex;
+    }
+}
+
+#menuprincipal ul.sousmenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: auto;
+    width: max-content;
+    max-width: 300px;
+    background-color: #2c3e50;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    z-index: 1000;
+}
+
+#menuprincipal li:hover > ul.sousmenu {
+	display: block;  
+}
+
+#menuprincipal ul.sousmenu li {
+    display: block;
+    margin: 3px 0;
+    background-color: transparent;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+#menuprincipal ul.sousmenu li a {
+    color: #ecf0f1;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 4px;
+    white-space: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+#menuprincipal ul.sousmenu li a:hover {
+    background-color: #34495e;
+    color: #3498db;
+    transform: translateX(3px);
+}
+#menuprincipal ul.sousmenu li.menuactuel a {
+    color: #3498db;
+    font-weight: 500;
+    background-color: rgba(52, 152, 219, 0.1);
+}
+#menuprincipal .sousmenu li:first-child {
+	border-top: none;
+}
+@media screen and (max-width : 640px) {
+	#menuprincipal li:hover > ul.sousmenu {
+	display: none;
+}	
+}
+.menuintermediaire a, .menuintermediaire a:hover, .menuintermediaire a:visited {
+	text-decoration: none;
+	color: black;
+}
+#contenu {
+   background-color: transparent;
+   display: flex;
+   flex-direction: row;
+   min-height: 400px;
+   border-radius: 10px;
+}
+#principal {
+   width: 72%;
+   background-color: rgba(8, 20, 128, 0.699);   
+   float: left;
+   border-radius: 10px;
+   margin: 5px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   color:whitesmoke;
+}
+#principal1 {
+	width: 50%;
+	background-color: transparent;   
+	float: left;
+	border-radius: 10px;
+	margin: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color:whitesmoke;
+}
+.interieurprincipal {
+	padding: 10px;   
+}
+@media screen and (max-width : 640px) {
+	#principal {
+		float: none;
+		width: 100%;
+	}
+}
+#secondaire {
+   background-color: transparent;
+   width: 25%;
+   float: right;
+   border-radius: 10px;
+   margin:5px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   color: whitesmoke;
+}
+#secondaire1 {
+	background-color: transparent;
+	width: 45%;
+	float: right;
+	border-radius: 10px;
+	margin:5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: whitesmoke;
+}
+#secondaire ul{
+	list-style-type : none;
+	color: whitesmoke;
+}
+#secondaire2 ul{
+	list-style-type : none;
+	color: whitesmoke;
+}
+.interieursecondaire {
+	padding: 10px;
+	border:3px ridge black;
+	background-color: #2e303079;
+	border-radius: 10px;
+}
+a {
+outline: none;
+text-decoration: none;
+padding: 2px 1px 0;
+}
+
+a:link {
+color: yellow;
+}
+
+a:visited {
+color: orange;
+}
+
+a:focus {
+border-bottom: 1px solid;
+background: black;
+}
+
+a:hover {
+border-bottom: 1px solid;
+background: #000000;
+}
+a:active {
+background: white;
+color: black;
+}
+#slides {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#controlV2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+#control {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+}
+#img{
+    border: solid 2px black;
+    cursor: pointer;
+}
+@media screen and (max-width : 640px) {
+	#secondaire {
+		float: none;
+		width: 100%;
+	}
+}
+footer {
+   background-color: transparent;
+   opacity: 50%;
+   color: white;
+   min-height: 25px;
+   padding: 10px;
+}
+/* *** pour traiter les balises qui n'ont que du contenu flottant *********** */
+.push {
+    clear: both;
+}
+form {
+	max-width: 300px;
+	margin: 0;
+	padding: 0 5px;
+}
+
+p > label {
+	display: block;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+textarea,
+
+
+fieldset {
+	width : 100%;
+	border: 1px solid #333;
+	margin: 0;
+
+	font-family: inherit;
+	font-size: 90%;
+
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+input:invalid {
+  	box-shadow: 0 0 5px 1px red;
+}
+
+input:focus:invalid {
+  	outline: none;
+}
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <link rel="stylesheet" href="../css/stylesheet.css" />
+      <script src="../script/script2.js"></script>
+      <link rel="icon" href="../img/CV_Logo.png" />
+      <title>Mon CV</title>
+   </head>
+   <body onload="displaySlide()">
+      <div id="page">
+        <div class="loader">
+            <span class="lettre">C</span>
+            <span class="lettre">H</span>
+            <span class="lettre">A</span>
+            <span class="lettre">R</span>
+            <span class="lettre">G</span>
+            <span class="lettre">E</span>
+            <span class="lettre">M</span>
+            <span class="lettre">E</span>
+            <span class="lettre">N</span>
+            <span class="lettre">T</span>
+         </div>
+         <header>
+            <a href="../index.html">Page principale</a>
+         </header>
+         <hr>
+         <nav id="menuprincipal">
+         	<a href="#" class="menumobile">Menu</a>
+            <ul>
+               <li><a href="">Sports</a>
+                  <ul class="sousmenu">
+                     <li><a href="rubrique1.html">- 5 ans</a></li>
+                     <li><a href="rubrique3.html">+ 5 ans</a></li>
+                  </ul>
+               </li>
+               <li class="menuactuel"><a href="">Formations</a>
+                  <ul class="sousmenu">
+                    <li class="menuactuel"><a href="../page/diplomes.html">Diplomes</a></li>
+                    <li><a href="../page/j-lycee.html">Jusqu'au lycée</a></li>
+                    <li><a href="../page/etudesup.html">Etude supérieur</a></li>
+                  </ul>
+               </li>
+               <li><a href="">Contact</a>
+                <ul class="sousmenu">
+                   <li><a href="formulaire.html">Formuliare de contact</a></li>
+                   <li><a href="../page/avis.html">Avis</a></li>
+                   <li><a href="MonCVPDF.html">Mon CV PDF</a></li>
+                </ul>
+             </li>
+             <li class="menu"><a href="">style</a>
+               <ul class="sousmenu">
+                  <li><a onclick='light()'>light-mode</a></li>
+                  <li><a onclick='dark()'>dark-mode</a></li>
+               </ul>
+            </li>
+          </ul>
+       </nav>
+       <hr>
+       <div id="contenu">
+            <section id="principal1">
+               <div class="interrieurprincipal">
+                  <div class="slides">
+                     <img src="../img/brevet.jpeg" style="width:100%">
+                  </div>
+                  <div class="slides">
+                     <img src="../img/bac.jpeg" style="width:100%">
+                  </div>
+                  <div class="slides">
+                     <img src="../img/licence.jpeg" style="width:100%">
+                  </div>
+                  <div id="controlV2">
+                     <img src="../img/previous.svg" height="50" onclick="nextSlide(-1)">
+                     <img src="../img/next.svg" height="50" onclick="nextSlide(1)">
+                  </div>
+               </div>
+            </section>
+            <aside id="secondaire1">
+               <div class="interieursecondaire">
+                  <p>J'ai obtenus plusieurs diplomes durant mon cursus scolaire.</p>
+                  <p>J'ai tous d'abord suivie un parcour générale jusqu'au lycées ou j'ai choisi un bac scientifique avec option maths physique.</p>
+                  <p>Puis j'ai démaré une licnece math et informatique à l'ubo de brest.</p>
+                  <ul>
+                    <li>brevet</li>
+                    <li>bac spé maht et physique-chimie</li>
+                    <li>licence math et informatique</li>
+                  </ul>
+               </div>
+            </aside>   
+            <div class="push"></div>
+       </div>
+       <hr>
+       <footer>
+         Mon CV pour 2032 dans le cadre de l'UE math et informatique.
+       </footer>
+    </div>
+</body>
+</html>
