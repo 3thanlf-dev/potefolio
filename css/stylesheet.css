@@ -5,7 +5,6 @@ body {
     background-size: cover;
     background-position: bottom;
     background-attachment: fixed;
-    color: black;
     font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
     font-size: 100%; 
     overflow-x: hidden;
@@ -28,8 +27,13 @@ body {
     margin: 0 auto;   
     max-width: 1000px;   
 }
+pL{
+    color: black;
+     text-align: justify;	
+}
 
 p {
+    color: white;
      text-align: justify;	
 }
 
@@ -396,7 +400,6 @@ color: black;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-
 }
 #img{
     border: solid 2px black;
@@ -410,12 +413,26 @@ color: black;
 }
 footer {
    background-color: transparent;
-   opacity: 50%;
-   color: white;
+    opacity: 0.5;
+    color: white;
    min-height: 25px;
    padding: 10px;
 }
-/* *** pour traiter les balises qui n'ont que du contenu flottant *********** */
+
+.footernoir {
+    opacity: 1;
+    color: black;
+    min-height: 25px;
+    padding: 10px;
+}
+
+.footerblanc {
+    color: white;
+    opacity: 1;
+    padding: 10px;
+}
+
+
 .push {
     clear: both;
 }
@@ -454,4 +471,3 @@ input:invalid {
 input:focus:invalid {
   	outline: none;
 }
-

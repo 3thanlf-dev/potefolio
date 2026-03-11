@@ -33,9 +33,34 @@ window.addEventListener('load', function() {
 function light(){
     let b = document.getElementsByTagName("body");
     b[0].classList.add('bodyL');
+    let f = document.getElementsByTagName('footer');
+    if (f.length > 0) {
+        f[0].classList.add('footernoir');
+        f[0].classList.remove('footerblanc');
+    }
+}
+
+function footernoir(){
+    let f = document.getElementsByTagName('footer');
+    if (f.length > 0) {
+        f[0].classList.add('footernoir');
+    }
 }
 
 function dark(){
     let c = document.getElementsByClassName("bodyL");
-    c[0].classList.remove('bodyL');
+    if (c.length > 0) { c[0].classList.remove('bodyL'); }
+    let f = document.getElementsByTagName('footer');
+    if (f.length > 0) {
+        f[0].classList.add('footerblanc');
+        f[0].classList.remove('footernoir');
+        console.log('dark(): footer classes =', f[0].className);
+    }
+}
+
+function removeFooterNoir(){
+    let f = document.getElementsByTagName('footer');
+    if (f.length > 0) {
+        f[0].classList.remove('footernoir');
+    }
 }

@@ -35,7 +35,6 @@ displaySlide();
 window.addEventListener('load', function() {
     document.querySelector('.loader').classList.add('fondu-out');
     
-    // Gestion du menu mobile
     const menuMobile = document.querySelector('.menumobile');
     if (menuMobile) {
         menuMobile.addEventListener('click', function(e) {
@@ -49,11 +48,19 @@ window.addEventListener('load', function() {
 function light(){
     let b = document.getElementsByTagName("body");
     b[0].classList.add('bodyL');
-}
+    let f = document.getElementsByTagName('footer');
+    f[0].classList.add('footernoir');
+    f[0].classList.remove('footerblanc');}
+
 
 function dark(){
     let c = document.getElementsByClassName("bodyL");
-    c[0].classList.remove('bodyL');
+        c[0].classList.remove('bodyL');
+
+        let f = document.getElementsByTagName('footer');
+        f[0].classList.add('footerblanc');
+        f[0].classList.remove('footernoir');
+        console.log('dark(): footer classes =', f[0].className);
 }
 
 
