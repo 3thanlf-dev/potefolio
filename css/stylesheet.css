@@ -419,6 +419,19 @@ footer {
    padding: 10px;
 }
 
+.bodyL a,
+.bodyL a:link,
+.bodyL a:visited {
+    color: black !important;
+}
+
+.bodyL a:hover,
+.bodyL a:active,
+.bodyL a:focus {
+    color: black ;
+    background: transparent ;
+}
+
 .footernoir {
     opacity: 1;
     color: black;
