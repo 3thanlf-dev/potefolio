@@ -29,7 +29,7 @@ python -m http.server 8000
 Ou utilisez l'extension "Live Server" de VS Code pour un rechargement automatique.
 
 ## Édition
-
+- seulement dans la branche dev
 - Modifiez les pages HTML dans le dossier `page/` ou `index.html` pour changer le contenu.
 - Mettez à jour les styles dans `css/stylesheet.css`.
 - Les scripts sont dans `script/`.
