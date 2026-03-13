@@ -50,20 +50,35 @@ function light(){
     b[0].classList.add('bodyL');
     let f = document.getElementsByTagName('footer');
     f[0].classList.add('footernoir');
-    f[0].classList.remove('footerblanc');}
-
+    f[0].classList.remove('footerblanc');
+    
+    // Sauvegarde le thème
+    localStorage.setItem('theme', 'light');
+}
 
 function dark(){
     let c = document.getElementsByClassName("bodyL");
-        c[0].classList.remove('bodyL');
-
-        let f = document.getElementsByTagName('footer');
-        f[0].classList.add('footerblanc');
-        f[0].classList.remove('footernoir');
-        console.log('dark(): footer classes =', f[0].className);
+    if(c[0]) c[0].classList.remove('bodyL');
+    
+    let f = document.getElementsByTagName('footer');
+    f[0].classList.add('footerblanc');
+    f[0].classList.remove('footernoir');
+    
+    // Sauvegarde le thème
+    localStorage.setItem('theme', 'dark');
 }
 
-
+// Applique le thème sauvegardé au chargement de CHAQUE page
+document.addEventListener('DOMContentLoaded', function() {
+    const themeSauvegarde = localStorage.getItem('theme');
+    
+    if (themeSauvegarde === 'light') {
+        light();
+    } else if (themeSauvegarde === 'dark') {
+        dark();
+    }
+    // Si pas de thème sauvegardé, garde le style par défaut
+});
 
 let xmlhttp = new XMLHttpRequest();
 function loadXMLDoc() {
